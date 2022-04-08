@@ -58,6 +58,7 @@ public class StringClass {
      // zadanie pisanie pionowe Potrawie coraz wiecej z programowania
      String zdanie = "Potrafię coraz więcej z programowania";
 
+
      for(int p = 0; p< zdanie.length(); p++){
       System.out.println(zdanie.charAt(p));
      }

@@ -1,0 +1,5 @@
+Napisze w  nik kilka linijek,
+abysmy mieli cokolwiek do wczytania.
+Jeszcze jedno zdanie,
+któe mieście sie w tej linijce
+oraz tej.
