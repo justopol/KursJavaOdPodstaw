@@ -1,5 +1,6 @@
 package com.zadania_rekrutacja.kolko_krzyzyk;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class Gra {
@@ -13,7 +14,11 @@ public class Gra {
         losujGracza();
     }
     public void wybierzPole(int pion, int poziom){
-        plansza[pion][poziom] = znak + " ";
+        if(sprawdzPoprawnosc(pion, poziom)){
+            plansza[pion-1][poziom-1] = znak + " ";
+        }else{
+            System.out.println("wybierz innne pole");
+        }
     }
     public void wyswietlPlansze(){
         for( int i =0; i < wymiaryPlanszy; i++){
@@ -21,6 +26,22 @@ public class Gra {
                 System.out.print(plansza[i][j]);
             }
             System.out.println();
+        }
+        System.out.println();
+    }
+
+    public void zmienTure(){
+        if(znak == "x"){
+            znak = "o";
+        }else{
+            znak = "x";
+        }
+    }
+    private boolean sprawdzPoprawnosc(int pion, int poziom){
+        if(plansza[pion-1][poziom-1] == "- "){
+            return true;
+        }else{
+            return false;
         }
     }
 
