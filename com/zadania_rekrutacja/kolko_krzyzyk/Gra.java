@@ -16,7 +16,7 @@ public class Gra {
       }
 
       Random r = new Random();
-      int liczba = r.nextInt(11);
+      int liczba = r.nextInt(10);
       if(liczba%2  == 0){
           System.out.println("Zaczyna gracz x.");
           gracz = "x";
