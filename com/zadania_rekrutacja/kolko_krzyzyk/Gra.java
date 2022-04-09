@@ -37,6 +37,22 @@ public class Gra {
             znak = "x";
         }
     }
+    public boolean czyKoniecGry(){
+        boolean czyJestMyslnik = false;
+        czyJestMyslnikNaPlanszy();
+    }
+
+    private boolean czyJestMyslnikNaPlanszy() {
+        for (int i = 0; i < wymiaryPlanszy; i++){
+            for (int j = 0; j < wymiaryPlanszy; j++){
+                if(plansza[i][j] == "- "){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     private boolean sprawdzPoprawnosc(int pion, int poziom){
         if(plansza[pion-1][poziom-1] == "- "){
             return true;
