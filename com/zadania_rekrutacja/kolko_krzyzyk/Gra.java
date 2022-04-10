@@ -21,11 +21,8 @@ public class Gra {
         }
     }
     public void wyswietlPlansze(){
-        try {
-            Runtime.getRuntime().exec("clear");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
         for( int i =0; i < wymiaryPlanszy; i++){
             for( int j =0; j < wymiaryPlanszy; j++){
                 System.out.print(plansza[i][j]);
