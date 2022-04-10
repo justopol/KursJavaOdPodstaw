@@ -37,9 +37,10 @@ public class Gra {
             znak = "x";
         }
     }
-    public boolean czyKoniecGry(){
-        boolean czyJestMyslnik = false;
-        czyJestMyslnikNaPlanszy();
+    public Wynik czyKoniecGry(){
+        boolean czyJestMyslnik = czyJestMyslnikNaPlanszy();
+        Wynik wynik = new Wynik(czyJestMyslnik, Zwyciezca.REMIS);
+        return wynik;
     }
 
     private boolean czyJestMyslnikNaPlanszy() {

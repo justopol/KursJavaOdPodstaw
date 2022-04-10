@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class MainKoloKrzyzyk {
     public static void main(String[]args){
         Gra gra = new Gra();
-        while(true){
+        boolean czyGraTrwa = true;
+        while(czyGraTrwa){
             Scanner scanner = new Scanner(System.in);
             System.out.print("podaj liczbę w pionie: ");
             int pion = scanner.nextInt();
@@ -14,6 +15,9 @@ public class MainKoloKrzyzyk {
             gra.wybierzPole(pion, poziom);
             gra.wyswietlPlansze();
             gra.zmienTure();
+
+           Wynik wynik = gra.czyKoniecGry();
+           czyGraTrwa = wynik.getCzyKoniecGry();
         }
 
 
